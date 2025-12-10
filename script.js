@@ -18,7 +18,7 @@ document.getElementById('form')
                 alert(JSON.stringify(err));
             });
 
-       event.target.reset();
+       form.reset();
         return false;
     });
 
@@ -58,4 +58,5 @@ inputPlaceholder.forEach((input) => {
     });
 
 });
+
 
